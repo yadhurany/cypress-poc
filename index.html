@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    form {
+      position: absolute;
+      width: 200px;
+      left: 50%;
+      margin-left: -100px;
+      margin-top: 200px;
+      background: #00ffe1;
+      border: 2px solid gray;
+      padding: 20px;
+    }
+    .form-title {
+      background: gray;
+      padding: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .form-input {
+      margin-top: 10px;
+      float: left;
+      width: 100%;
+    }
+    .form-input-label {
+      width: 35%;
+      float: left;
+    }
+    input[type=text], input[type=password] {
+      width: 60%;
+      float: right;
+    }
+    button[type=button] {
+      margin-top: 10px;
+      float: right;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="form-main" action="#" method="post">
+    <div class="container">
+      <div class="form-title">
+        Acesso:
+      </div>
+      <div class="form-input">
+        <label for="username" class="form-input-label">
+          <b>Login</b>
+        </label>
+        <input type="text" placeholder="Login" name="username" id="username" required>
+      </div>
+      <div class="form-input">
+        <label for="password" class="form-input-label">
+          <b>Senha</b>
+        </label>
+        <input type="password" placeholder="Senha" name="password" id="password" required>
+      </div>
+      <button id="login" type="button" onclick="doLogin()">Login</button>
+      <button id="cancel" type="button" onclick="doCancel()">Cancelar</button>
+    </div>
+  </form>
+
+  <script>
+
+    const USERNAME = "yadhurany";
+    const PASSWORD = "1senha";
+
+    function doLogin() {
+      const username = document.getElementById("username").value;
+      if (!/^[A-z]{1}[A-z0-9]{2,9}$/g.test(username)) {
+        alert("Campo Login invalido!");
+        return;
+      }
+      const password = document.getElementById("password").value;
+      if (!/^[0-9]{1}.{4,9}$/g.test(password)) {
+        alert("Campo Senha invalido!");
+        return;
+      }
+      if (username === USERNAME && password === PASSWORD) {
+        window.location = "./logado.html";
+      } else {
+        alert("Login e/ou Senha invalidos!");
+      }
+    }
+
+    function doCancel() {
+      window.close();
+    }
+
+  </script>
+
+</body>
+</html>
