@@ -1,13 +1,15 @@
-## Testes de UI utilizando o Cypress | UI tests using Cypress
+[English](https://github.com/yadhurany/cypress-poc/blob/master/README-en.md)
 
-Neste projeto foram criados dois cenários de teste, um de sucesso e um de falha a fim de demonstrar testes automatizados com o Cypress. | In this project, two test cases were created, one in a positive scenario and other in a negative one, in order to demonstrate UI automated tests using Cypress.
+## Testes de UI utilizando o Cypress
 
-#### Antes de rodar o Projeto | Before running the project
+Neste projeto foram criados dois cenários de teste, um de sucesso e um de falha a fim de demonstrar testes automatizados com o Cypress.
+
+#### Antes de rodar o Projeto
 ```
 npm install
 ```
 
-#### Para Iniciar o Projeto | Starting the project
+#### Para Iniciar o Projeto
 ```
 npm run start
 ```
